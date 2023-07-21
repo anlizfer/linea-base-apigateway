@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "JiGgR0fhDvjr+tiVAm8+OUKlW8Oei3A5dgL5YuCbhXc=",
+  "Source": "apigateway.microservice",
+  "BasePath": "_content/apigateway.microservice",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

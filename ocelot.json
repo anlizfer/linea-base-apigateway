@@ -1,0 +1,44 @@
+{
+  "Routes": [
+
+    //MICROSERVICIO PARAMS
+    {
+      "DownstreamPathTemplate": "/control/docs/control-params-api/v1/{path}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "control-params-api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/params/{path}",
+      "UpstreamhttpMethod": [],
+      "DelegatingHandlers": [
+        "BlackListHandler"
+      ]
+    },
+
+    
+    // MICROSERVICIO SECURITY
+    {
+      "DownstreamPathTemplate": "/control/docs/control-security-api/v1/{path}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "control-params-api",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/register/{path}",
+      "UpstreamhttpMethod": [],
+      "DelegatingHandlers": [
+        "BlackListHandler"
+      ]
+    }
+
+  ],
+  "GlobalConfiguration": {
+    "RequestIdKey": "OcRequestId",
+    "AdministrationPath": "/administration"
+  }
+}

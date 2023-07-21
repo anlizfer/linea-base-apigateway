@@ -1,0 +1,212 @@
+{
+  "Routes": [
+
+    //MICROSERVICIO PARAMS
+    {
+      "DownstreamPathTemplate": "/grupo-mok/ecosystem/ecosystem-params-co/v1/{path}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "ecosystem-params-co",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/params/{path}",
+      "UpstreamhttpMethod": [],
+      "DelegatingHandlers": [
+        "BlackListHandler"
+      ]
+    },
+
+    // MICROSERVICIO PEOPLE
+    {
+      "DownstreamPathTemplate": "/grupo-mok/ecosystem/ecosystem-people-bu/v1/{path}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "ecosystem-people-bu",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/people/{path}",
+      "UpstreamhttpMethod": [],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "DelegatingHandlers": [
+        "BlackListHandler"
+      ]
+    },
+    // MICROSERVICIO REGISTER
+    {
+      "DownstreamPathTemplate": "/grupo-mok/ecosystem/ecosystem-register-bu/v1/{path}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "ecosystem-register-bu",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/register/{path}",
+      "UpstreamhttpMethod": [],
+      "DelegatingHandlers": [
+        "BlackListHandler"
+      ]
+    },
+    // MICROSERVICIO SECURITY
+
+    //*** passwordRecovery ***
+    {
+      "DownstreamPathTemplate": "/grupo-mok/ecosystem/ecosystem-security-bu/v1/passwordRecovery",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "ecosystem-security-bu",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/security/passwordRecovery",
+      "UpstreamhttpMethod": [ "POST" ],      
+      "DelegatingHandlers": [
+        "BlackListHandler"
+      ]
+    },
+
+    //*** passwordValidateCode ***
+
+    {
+      "DownstreamPathTemplate": "/grupo-mok/ecosystem/ecosystem-security-bu/v1/passwordValidateCode/{path}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "ecosystem-security-bu",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/security/passwordValidateCode/{path}",
+      "UpstreamhttpMethod": [ "GET" ],
+      "DelegatingHandlers": [
+        "BlackListHandler"
+      ]
+    },
+
+    //*** changePassword ***
+    {
+      "DownstreamPathTemplate": "/grupo-mok/ecosystem/ecosystem-security-bu/v1/changePassword",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "ecosystem-security-bu",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/security/changePassword",
+      "UpstreamhttpMethod": [ "POST" ],
+      "DelegatingHandlers": [
+        "BlackListHandler"
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/grupo-mok/ecosystem/ecosystem-security-bu/v1/{path}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "ecosystem-security-bu",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/security/{path}",
+      "UpstreamhttpMethod": [],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "DelegatingHandlers": [
+        "BlackListHandler"
+      ]
+    },
+    // MICROSERVICIO LOGIN
+    {
+      "DownstreamPathTemplate": "/grupo-mok/ecosystem/ecosystem-login-bu/v1/{path}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "ecosystem-login-bu",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/login/{path}",
+      "UpstreamhttpMethod": [],
+      "DelegatingHandlers": [
+        "BlackListHandler"
+      ]
+    },
+
+    // MICROSERVICIO EXTERNAL SERVICE
+    {
+      "DownstreamPathTemplate": "/grupo-mok/ecosystem/ecosystem-external-service-bu/v1/{path}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "ecosystem-external-service-bu",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/external/{path}",
+      "UpstreamhttpMethod": [],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "DelegatingHandlers": [
+        "BlackListHandler"
+      ]
+    },
+    // MICROSERVICIO SCHEDULING
+    {
+      "DownstreamPathTemplate": "/grupo-mok/ecosystem/ecosystem-scheduling-bu/v1/{path}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "ecosystem-scheduling-bu",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/scheduling/{path}",
+      "UpstreamhttpMethod": [],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "DelegatingHandlers": [
+        "BlackListHandler"
+      ]
+    },
+    // MICROSERVICIO BENEFICIARY
+    {
+      "DownstreamPathTemplate": "/grupo-mok/ecosystem/ecosystem-beneficiary-bu/v1/{path}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "ecosystem-beneficiary-bu",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/beneficiary/{path}",
+      "UpstreamhttpMethod": [],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "DelegatingHandlers": [
+        "BlackListHandler"
+      ]
+    }
+
+  ],
+  "GlobalConfiguration": {
+    "RequestIdKey": "OcRequestId",
+    "AdministrationPath": "/administration"
+  }
+}

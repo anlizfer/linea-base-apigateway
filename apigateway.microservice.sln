@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32505.173
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "apigateway.microservice", "apigateway.microservice.csproj", "{31716656-20C0-4015-A6D9-4E7ED785E283}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31716656-20C0-4015-A6D9-4E7ED785E283}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31716656-20C0-4015-A6D9-4E7ED785E283}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31716656-20C0-4015-A6D9-4E7ED785E283}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31716656-20C0-4015-A6D9-4E7ED785E283}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {53B30476-D0C5-442C-85AE-2197FD3B98AC}
+	EndGlobalSection
+EndGlobal
