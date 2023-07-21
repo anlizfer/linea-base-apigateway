@@ -25,11 +25,11 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "control-params-api",
+          "Host": "control-security-api",
           "Port": 8080
         }
       ],
-      "UpstreamPathTemplate": "/register/{path}",
+      "UpstreamPathTemplate": "/security/{path}",
       "UpstreamhttpMethod": [],
       "DelegatingHandlers": [
         "BlackListHandler"
